@@ -10,7 +10,9 @@
       "Bash(taskkill:*)",
       "Bash(move \"blitz-hauling-logo.jpg\" publicimages)",
       "Bash(npx prisma init)",
-      "Bash(npx prisma migrate dev:*)"
+      "Bash(npx prisma migrate dev:*)",
+      "Bash(npx prisma db seed:*)",
+      "Bash(npm uninstall:*)"
     ]
   }
 }

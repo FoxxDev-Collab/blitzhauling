@@ -2,16 +2,19 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { signOut } from 'next-auth/react';
 import {
   LayoutDashboard,
   Users,
   Briefcase,
   FileText,
   Mail,
-  Home
+  Home,
+  LogOut
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { SITE_CONFIG } from '@/lib/constants';
+import { Button } from '@/components/ui/button';
 
 const navItems = [
   { href: '/admin', label: 'Dashboard', icon: LayoutDashboard },
@@ -59,7 +62,7 @@ export function AdminSidebar() {
       </nav>
 
       {/* Footer */}
-      <div className="border-t p-4">
+      <div className="border-t p-4 space-y-2">
         <Link
           href="/"
           className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
@@ -67,6 +70,15 @@ export function AdminSidebar() {
           <Home className="h-4 w-4" />
           <span>Back to Website</span>
         </Link>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="w-full justify-start text-muted-foreground hover:text-foreground"
+          onClick={() => signOut({ callbackUrl: '/login' })}
+        >
+          <LogOut className="mr-2 h-4 w-4" />
+          <span>Logout</span>
+        </Button>
       </div>
     </div>
   );
