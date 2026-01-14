@@ -6,7 +6,9 @@
       "Bash(npx shadcn@latest add:*)",
       "Bash(npm install:*)",
       "Bash(timeout 5 tail:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(taskkill:*)",
+      "Bash(move \"blitz-hauling-logo.jpg\" publicimages)"
     ]
   }
 }

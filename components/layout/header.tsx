@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SITE_CONFIG, NAV_LINKS } from '@/lib/constants';
@@ -17,8 +18,15 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl md:text-2xl">
-            <span className="text-primary">{SITE_CONFIG.name}</span>
+          <Link href="/" className="flex items-center gap-3">
+            <Image
+              src="/images/blitz-hauling-logo.jpg"
+              alt={SITE_CONFIG.name}
+              width={50}
+              height={50}
+              className="rounded-md"
+            />
+            <span className="font-bold text-lg md:text-xl">{SITE_CONFIG.name}</span>
           </Link>
 
           {/* Desktop Navigation */}
