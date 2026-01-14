@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(dir /s \"d:\\\\Foxx Cyber LLC\\\\blitz-hauling\\\\blitzhauling\" /b)"
+      "Bash(dir /s \"d:\\\\Foxx Cyber LLC\\\\blitz-hauling\\\\blitzhauling\" /b)",
+      "Bash(npx shadcn@latest add button card input textarea label separator badge toast)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(npm install:*)",
+      "Bash(timeout 5 tail:*)",
+      "Bash(npm run build:*)"
     ]
   }
 }
