@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s \"d:\\\\Foxx Cyber LLC\\\\blitz-hauling\\\\blitzhauling\" /b)"
+    ]
+  }
+}

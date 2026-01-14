@@ -1,0 +1,19 @@
+This is going to be a full management platform for my cousin running his own business: Blitz Hauling.
+
+It will start as a simple marketing site, contact page to send an email. Thats it.
+
+Lets make this dream become a reality for my cousin.
+
+Full stack SaaS:
+
+1. Admin panel, user management
+2. Marketing pages
+3. Contact page with email sending
+4. Customer management
+5. Job management
+6. Billing and invoicing
+7. Analytics and reporting
+8. Notifications and alerts
+
+Lets start with the marketing site and contact page.
+
