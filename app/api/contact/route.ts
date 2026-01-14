@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { contactFormSchema } from '@/lib/validations';
 import { sendContactEmail } from '@/lib/email';
+import { prisma } from '@/lib/prisma';
 import { ZodError } from 'zod';
 
 export async function POST(request: Request) {
@@ -10,6 +11,17 @@ export async function POST(request: Request) {
 
     // Validate with Zod schema
     const validatedData = contactFormSchema.parse(body);
+
+    // Save to database
+    await prisma.contactSubmission.create({
+      data: {
+        name: validatedData.name,
+        email: validatedData.email,
+        phone: validatedData.phone,
+        message: validatedData.message,
+        status: 'NEW'
+      }
+    });
 
     // Send email via Nodemailer
     await sendContactEmail(validatedData);

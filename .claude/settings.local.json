@@ -8,7 +8,9 @@
       "Bash(timeout 5 tail:*)",
       "Bash(npm run build:*)",
       "Bash(taskkill:*)",
-      "Bash(move \"blitz-hauling-logo.jpg\" publicimages)"
+      "Bash(move \"blitz-hauling-logo.jpg\" publicimages)",
+      "Bash(npx prisma init)",
+      "Bash(npx prisma migrate dev:*)"
     ]
   }
 }
